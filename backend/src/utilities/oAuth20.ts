@@ -7,6 +7,7 @@ import { tempAuthKey } from "../Controllers.js";
 import dotenv from "dotenv"
 dotenv.config();
 
+console.log(process.env.BASE_URL);
 passport.use(
   new GoogleStrategy(
     {
@@ -16,6 +17,7 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
+
         let user = await User.findOne({ email: profile.emails?.[0]?.value });
 
         if (!user) {
