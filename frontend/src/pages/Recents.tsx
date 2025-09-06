@@ -18,6 +18,7 @@ export const Recents = () => {
       const res = await apiClient.get<{ roadmaps: Roadmap[] }>("/getAllRoadMaps");
       return res.data.roadmaps;
     },
+    staleTime:10000
   });
 
   if (isLoading) {

@@ -19,8 +19,7 @@ export async function generateRoadMap(prompt: string) {
     const rawContent = completion.choices[0]?.message.content;
     if (!rawContent) throw new Error("AI did not return any content.");
 
-    // console.log("Raw AI Response:", rawContent);
-
+  
    
     let cleanContent = rawContent
       .replace(/```json/gi, "")
@@ -29,8 +28,7 @@ export async function generateRoadMap(prompt: string) {
       .replace(/^Cleaned Content:\s*/i, "") 
       .trim();
 
-    // console.log("Cleaned Content:", cleanContent);
-
+ 
     const result = JSON.parse(cleanContent);
     return result;
 

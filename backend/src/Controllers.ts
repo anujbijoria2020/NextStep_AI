@@ -200,10 +200,7 @@ return res.status(500).json({
 const GenarateRoadmapController = async(req:Request,res:Response)=>{
   const {topic,goal} = req.body;
   const user = (req as any).user;
-  // console.log("user from auth middleware is : ",(req as any).user.id);
-
-  console.log(topic,goal);
-  const prompt = `Create a detailed learning roadmap for: ${topic}
+   const prompt = `Create a detailed learning roadmap for: ${topic}
 
  Goal: ${goal}
  TimeFrame: maximum 1 year
@@ -283,7 +280,7 @@ const showRoadMapController =async(req:Request,res:Response)=>{
  const getAllRoadmapsController = async (req: Request, res: Response) => {
   try {
     const user = (req as any).user;
-    const roadmaps = await RoadMapModel.find({ user: user.id });
+    const roadmaps = (await RoadMapModel.find({ user: user.id })).reverse();
 
     return res.status(200).json({
       message: "Fetched all roadmaps successfully",
