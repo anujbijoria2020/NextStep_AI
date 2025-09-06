@@ -32,7 +32,10 @@ export const Recents = () => {
   return (
     <div className="flex justify-center">
       <div className="flex flex-col gap-4 mt-5">
+        {data?.length===0 && <div className="text-center text-white/70 italic p-6 bg-white/5 border border-white/20 rounded-2xl shadow-lg backdrop-blur-lg"
+        >No data is available</div>}
         {data?.map((card) => (
+          
           <div
             key={card._id}
             className="p-2 sm:min-w-150 md:max-w-200 xl:min-w-280"

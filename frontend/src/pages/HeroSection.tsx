@@ -38,7 +38,7 @@ const HeroSection = () => {
             </button>
             <button
               onClick={() => navigate("/contact")}
-              className="px-6 py-3 border border-white text-white rounded-xl"
+              className="px-6 py-3 border border-white text-white rounded-xl cursor-pointer"
             >
               Contact
             </button>

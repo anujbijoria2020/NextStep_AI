@@ -189,7 +189,7 @@ function handleGoogleLogin() {
           <div className="flex-1 h-px bg-gray-300"></div>
         </div>
 
-        <button className="w-full p-4 rounded-lg border bg-gray-300 hover:bg-gray-400 flex items-center justify-center gap-2"
+        <button className="w-full p-4 rounded-lg border bg-gray-300 hover:bg-gray-400 flex items-center justify-center gap-2 cursor-pointer"
         onClick={handleGoogleLogin}
         >
           <img

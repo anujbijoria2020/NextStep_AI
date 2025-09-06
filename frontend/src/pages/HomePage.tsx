@@ -78,12 +78,18 @@ const HomePage = () => {
               setGoal(e.target.value);
             }}
           />
-          <button
-            className="mt-4 w-90 self-center bg-gradient-to-r from-[#7CFF67] via-[#B19EEF] to-[#5227FF] text-black font-semibold py-3 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:scale-101 hover:shadow-[0_0_25px_rgba(178,158,239,0.1)] cursor-pointer"
-            onClick={handleGenerate}
-          >
-          {GenerateMutation.isPending?"Loading....":"Generate"}
-          </button>
+      <button
+  className="mt-4 w-full sm:w-1/2 md:w-1/3 self-center 
+             bg-gradient-to-r from-[#7CFF67] via-[#B19EEF] to-[#5227FF] 
+             text-black font-semibold py-3 rounded-lg shadow-md 
+             transition-all duration-300 ease-in-out 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(178,158,239,0.3)] 
+             cursor-pointer text-center"
+  onClick={handleGenerate}
+>
+  {GenerateMutation.isPending ? "Loading..." : "Generate"}
+</button>
+
         </div>
       </div>
     </div>

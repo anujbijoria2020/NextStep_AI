@@ -19,7 +19,7 @@ export const NavBar = () => {
     <div className="flex justify-center">
       {!hideNavBar && (
         <div className="flex justify-between w-[80%] bg-gray-700/20 h-16 rounded-xl items-center px-8 backdrop-blur-lg shadow-md relative z-50">
-          <span className="font-semibold text-lg text-white">NextStep AI</span>
+          <span className="font-semibold text-lg text-white cursor-pointer" onClick={()=>{navigate("/home")}}>NextStep AI</span>
 
           <div className="w-3/5">
             {/* Desktop Navbar */}
@@ -80,7 +80,7 @@ export const NavBar = () => {
               <span
                 className="nav-link text-white cursor-pointer"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/home");
                   setIsOpen(false);
                 }}
               >
