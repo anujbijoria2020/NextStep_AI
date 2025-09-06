@@ -1,0 +1,1 @@
+{"root":["./src/aiintegeration.ts","./src/controllers.ts","./src/routes.ts","./src/db.ts","./src/index.ts","./src/middleware/authmiddleware.ts","./src/mail/mailer.ts","./src/utilities/hashing.ts","./src/utilities/oauth20.ts","./src/utilities/validations.ts"],"version":"5.9.2"}

@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build output (if using TypeScript compiler)
+dist/
+build/
+
+# Local env files
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# MongoDB local database files
+data/
+dump/
+
+# Coverage / test output
+coverage/
+*.lcov
+
+# IDE / OS files
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Cache
+.cache/
