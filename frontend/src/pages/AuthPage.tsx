@@ -100,15 +100,13 @@ window.removeEventListener("message",handleMessage);
   }
 
 function handleGoogleLogin() {
-  const popup = window.open(
+   window.open(
   `${BACKEND_URL}/auth/google`,
     "GoogleLogin",
     "width=500,height=600"
   );
 
-  if (!popup) {
-  console.error("Failed to open popup");
-}
+  
   
   window.addEventListener("message", handleMessage);
 }
