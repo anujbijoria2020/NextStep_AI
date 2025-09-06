@@ -106,6 +106,9 @@ function handleGoogleLogin() {
     "width=500,height=600"
   );
 
+  if (!popup) {
+  console.error("Failed to open popup");
+}
   
   window.addEventListener("message", handleMessage);
 }
